@@ -13,13 +13,13 @@ let quizContainer = document.querySelector('#quizContainer');
 let answersContainer = document.querySelector('#answersContainer');
 let displayResult = document.querySelector('#displayResult');
 
-console.log(quizContainer);
+// console.log(quizContainer);
 
 // EventListener for quiz start button
 startQuiz.addEventListener('click', () => {
   let countDown = document.querySelector('#countDownContainer');
   let counter = document.querySelector('#counter');
-  console.log(counter);
+  // console.log(counter);
   let counterNum = 2;
 
   countDown.classList.remove('hidden');
@@ -98,7 +98,7 @@ document.querySelector('#submit').addEventListener('click', () => {
   };
 
   for (let ans of answers) {
-    console.log(ans);
+    // console.log(ans);
     if (ans.answer === ans.givenAns) {
       totalMark += 10;
     }
@@ -116,7 +116,7 @@ document.querySelector('#submit').addEventListener('click', () => {
   }
 
   // data setting on local storage and getting data from local storage
-  let storage = JSON.parse(localStorage.getItem('result'));
+  let storage = JSON.parse(localStorage.getItem('results'));
   if (storage) {
     localStorage.setItem(
       'results',
@@ -145,6 +145,7 @@ document.querySelector('#submit').addEventListener('click', () => {
   // Right side bar/ answer section
   let x = setTimeout(() => {
     showAnswers(answers);
+    console.log(showAnswers);
     displayResult.innerHTML = `<div
     class="h-[220px] w-[220px] mx-auto mt-8 flex flex-col justify-center border-2 rounded-tr-[50%] rounded-bl-[50%]"
   >
