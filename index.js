@@ -12,13 +12,12 @@ let submitContainer = document.querySelector('#submitContainer');
 let quizContainer = document.querySelector('#quizContainer');
 let answersContainer = document.querySelector('#answersContainer');
 let displayResult = document.querySelector('#displayResult');
+
 console.log(quizContainer);
 
 // EventListener for quiz start button
 startQuiz.addEventListener('click', () => {
   let countDown = document.querySelector('#countDownContainer');
-  console.log(countDown);
-
   let counter = document.querySelector('#counter');
   console.log(counter);
   let counterNum = 2;
@@ -53,19 +52,21 @@ const loadQuiz = async () => {
   const res = await fetch('./data/quiz.json');
   const data = await res.json();
   quizData = data;
-  displayQuiz(data);
+
+  displayQuiz(quizData);
 };
 
 // Displaying quiz on quiz page
 const displayQuiz = (data) => {
-  console.log(data);
+  // console.log(data);
   if (!data) {
     quizContainer.innerHTML = '';
     return;
   }
 
   data.forEach((quiz, i) => {
-    quizContainer.innerHTML += `<div class="m-3 py-3 px-4 shadow-sm rounded">
+    quizContainer.innerHTML += `
+    <div class="m-3 py-3 px-4 shadow-sm rounded">
   <div class="flex items-center">
     <div class="h-8 w-8 bg-green-300 rounded-full flex justify-center items-center text-green-800 mr-3">
       ${i + 1}
@@ -80,7 +81,7 @@ const displayQuiz = (data) => {
 };
 
 // EventListener for quiz submit button
-document.querySelector('#submit').addEventlistener('click', () => {
+document.querySelector('#submit').addEventListener('click', () => {
   if (answers.length < 6) {
     return;
   }
@@ -97,6 +98,7 @@ document.querySelector('#submit').addEventlistener('click', () => {
   };
 
   for (let ans of answers) {
+    console.log(ans);
     if (ans.answer === ans.givenAns) {
       totalMark += 10;
     }
