@@ -14,11 +14,7 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <title>Quiz Hero</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="./index.js" defer></script>
 
-  <!-- You don't need to change noChange.js file. It's fine -->
-  <script src="./noChange.js" defer></script>
-  <!-- You don't need to change noChange.js file. It's fine -->
 
   <script>
     tailwind.config = {
@@ -38,14 +34,18 @@
   <header class="h-16 flex items-center shadow-sm">
     <nav class="flex justify-between items-center w-9/12 mx-auto">
       <div class="text-zinc-800 font-bold uppercase">
-        <h1 class="text-lg">Quiz <span class="text-green-700">HERO</span></h1>
-        <p class="text-[10px] font-normal capitalize -mt-1">
-          Get ready to Quiz and be amazed!
-        </p>
+        <a href="./index.html">
+          <h1 class="text-lg">Quiz <span class="text-green-700">HERO</span></h1>
+          <p class="text-[10px] font-normal capitalize -mt-1">
+            Get ready to Quiz and be amazed!
+          </p>
+        </a>
       </div>
-      <button class="bg-green-600 font-light text-sm px-5 py-1 rounded text-white">
-        Blog
-      </button>
+      <a href="./blog.html">
+        <button class="bg-green-600 font-light text-sm px-5 py-1 rounded text-white">
+          Blog
+        </button>
+      </a>
     </nav>
   </header>
 
@@ -53,7 +53,7 @@
 
 
   <section class="text-gray-600 body-font">
-    <div class="container px-5 py-24 mx-auto my-5 ">
+    <div class="container px-5 mx-auto ">
       <div class="flex flex-wrap">
         <div class="p-4 m-auto lg:w-full md:w-full">
           <div class="flex border-2 rounded-lg border-gray-400 border-opacity-50 p-8 sm:flex-row flex-col">
@@ -62,14 +62,181 @@
               Blog:1
             </div>
             <div class="flex-grow">
-              <h2 class="text-gray-900 text-3xl title-font font-medium mb-3">Question Title?</h2>
-
+              <h2 class="text-gray-900 capitalize text-3xl title-font font-medium mb-3">.forEach(), .map(), .filter()
+                .... What's
+                the difference?</h2>
               <ul class="leading-relaxed text-xl">
-                <li><span class="text-green-500 text-2xl font-semibold mr-2">&#8611;</span>item</li>
-                <li><span class="text-green-500 text-2xl font-semibold mr-2">&#8611;</span>item</li>
-                <li><span class="text-green-500 text-2xl font-semibold mr-2">&#8611;</span>item</li>
+                <span class="text-red-500 text-base mr-2">.forEach()</span>
+                <li><span class="text-green-500 text-2xl font-semibold mr-2">&#8611;</span>
+                  used to execute the same code on every element in an array but does not change the array and it
+                  returns undefined.
+                </li>
+
+                <span class="text-red-500 text-base mr-2">.map()</span>
+                <li><span class="text-green-500 text-2xl font-semibold mr-2">&#8611;</span>
+                  executes the same code on every element in an array and returns a new array with the updated elements.
+                </li>
+
+                <span class="text-red-500 text-base mr-2">.filter()</span>
+                <li><span class="text-green-500 text-2xl font-semibold mr-2">&#8611;</span>
+                  checks every element in an array to see if it meets a certain criteria and returns a new array with
+                  the elements that return truthy for the criteria.
+                </li>
+
+
+                <span class="text-red-500 text-base mr-2">.find()</span>
+                <li><span class="text-green-500 text-2xl font-semibold mr-2">&#8611;</span>
+                  this method in Javascript is used to get the value of the first element in the array that satisfies
+                  the provided condition. It checks all the element and find matching first element and return.
+                </li>
               </ul>
 
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="text-gray-600 body-font">
+    <div class="container px-5 mx-auto ">
+      <div class="flex flex-wrap">
+        <div class="p-4 m-auto lg:w-full md:w-full">
+          <div class="flex border-2 rounded-lg border-gray-400 border-opacity-50 p-8 sm:flex-row flex-col">
+            <div
+              class="w-16 h-16 sm:mr-8 sm:mb-0 mb-4 inline-flex items-center justify-center rounded-full bg-green-100 text-green-900 font-semibold flex-shrink-0">
+              Blog:2
+            </div>
+            <div class="flex-grow">
+              <h2 class="text-gray-900 text-3xl capitalize title-font font-medium mb-3">Difference between Local
+                Storage, Session
+                Storage, and Cookies in JavaScript.</h2>
+              <ul class="leading-relaxed text-xl">
+                <span class="text-red-500 text-base mr-2">Local storage :</span>
+                <li><span class="text-green-500 text-2xl font-semibold mr-2">&#8611;</span>
+                  the most recent mechanism. It allows for larger amounts of data to be stored, but the data is not
+                  deleted when the browser is closed. Local storage is useful for storing data that the user will need
+                  to access later, such as offline data.
+                </li>
+
+                <span class="text-red-500 text-base mr-2">Session storage :</span>
+                <li><span class="text-green-500 text-2xl font-semibold mr-2">&#8611;</span>
+                  similar to cookies, but the data is only stored for the current session. This means that the data will
+                  be deleted when the user closes the browser. Session storage is useful for storing data that is
+                  sensitive, such as login credentials.
+                </li>
+
+                <span class="text-red-500 text-base mr-2">Cookies :</span>
+                <li><span class="text-green-500 text-2xl font-semibold mr-2">&#8611;</span>
+                  the oldest and most well-known mechanism. They are simple to use and well supported by browsers.
+                  However, they are limited to 4KB of data and are often used to store data that is not sensitive, such
+                  as user preferences.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="text-gray-600 body-font">
+    <div class="container px-5 mx-auto ">
+      <div class="flex flex-wrap">
+        <div class="p-4 m-auto lg:w-full md:w-full">
+          <div class="flex border-2 rounded-lg border-gray-400 border-opacity-50 p-8 sm:flex-row flex-col">
+            <div
+              class="w-16 h-16 sm:mr-8 sm:mb-0 mb-4 inline-flex items-center justify-center rounded-full bg-green-100 text-green-900 font-semibold flex-shrink-0">
+              Blog:3
+            </div>
+            <div class="flex-grow">
+              <h2 class="text-gray-900 text-3xl title-font capitalize font-medium mb-3">working of event loop in node
+                js.
+              </h2>
+              <ul class="leading-relaxed text-xl">
+                <span class="text-red-500 text-base mr-2">Event Loop :</span>
+                <li><span class="text-green-500 text-2xl font-semibold mr-2">&#8611;</span>
+                  An event loop is an endless loop, which waits for tasks, executes them, and then sleeps until it
+                  receives more tasks.
+                </li>
+
+                <li><span class="text-green-500 text-2xl font-semibold mr-2">&#8611;</span>
+                  The event loop executes tasks from the event queue only when the call stack is empty, there is no
+                  ongoing task.
+                </li>
+
+                <li><span class="text-green-500 text-2xl font-semibold mr-2">&#8611;</span>
+                  The event loop allows us to use callbacks and promises.
+                </li>
+
+                <li><span class="text-green-500 text-2xl font-semibold mr-2">&#8611;</span>
+                  The event loop executes the tasks starting from the oldest first. [ LIFO ]
+                </li>
+
+                <li><span class="text-green-500 text-2xl font-semibold mr-2">&#8611;</span>
+                  In event loop all application code that is inside callback functions.(non-top-level code)
+                  (non top level code.)
+                </li>
+
+                <li><span class="text-green-500 text-2xl font-semibold mr-2">&#8611;</span>
+                  Node js is event-driven architecture.event emitted,event loops picks them up and callbacks are called.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="text-gray-600 body-font">
+    <div class="container px-5 mx-auto ">
+      <div class="flex flex-wrap">
+        <div class="p-4 m-auto lg:w-full md:w-full">
+          <div class="flex border-2 rounded-lg border-gray-400 border-opacity-50 p-8 sm:flex-row flex-col">
+            <div
+              class="w-16 h-16 sm:mr-8 sm:mb-0 mb-4 inline-flex items-center justify-center rounded-full bg-green-100 text-green-900 font-semibold flex-shrink-0">
+              Blog:4
+            </div>
+            <div class="flex-grow">
+              <h2 class="text-gray-900 text-3xl capitalize title-font font-medium mb-3">working process two functions()
+                in this directory
+                (noChange.js) file.</h2>
+              <ul class="leading-relaxed text-xl">
+                <span class="text-red-500 text-base mr-2">Line(04): quizTimer() :</span>
+                <li><span class="text-green-500 text-2xl font-semibold mr-2">&#8611;</span>
+                  catch an boolean parameter named dismiss, if dismiss true then fire a async function() named
+                  clearInterval().
+                </li>
+
+                <li><span class="text-green-500 text-2xl font-semibold mr-2">&#8611;</span>
+                  if dismiss false then fire a async function() named
+                  setInterval().
+                </li>
+
+                <li><span class="text-green-500 text-2xl font-semibold mr-2">&#8611;</span>
+                  this setInterval() function() calculate some preparation that, start timing count , then calculate
+                  score, Add classlist and remove ClassList in elements.
+                </li>
+
+
+
+                <span class="text-red-500 text-base mr-2">Line(49): chooseQuiz() :</span>
+                <li><span class="text-green-500 text-2xl font-semibold mr-2">&#8611;</span>
+                  catch parameters named index and givenAns.
+                </li>
+
+                <li><span class="text-green-500 text-2xl font-semibold mr-2">&#8611;</span>
+                  if index and givenAns exist then calculate some operation and last call the function() named
+                  displayAnswers(answers) and pass the argument named answers.
+                </li>
+
+                <li><span class="text-green-500 text-2xl font-semibold mr-2">&#8611;</span>
+                  displayAnswers(answers) called and display some elements related operational based in html clint ui.
+                </li>
+              </ul>
             </div>
           </div>
         </div>
